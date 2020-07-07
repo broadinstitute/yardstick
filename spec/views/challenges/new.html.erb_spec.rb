@@ -1,8 +1,10 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.describe "challenges/new", type: :view do
   before(:each) do
-    assign(:challenge, Challenge.new())
+    assign(:challenge, Challenge.new)
   end
 
   it "renders new challenge form" do

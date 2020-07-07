@@ -1,4 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 describe Profile, "#submissions" do
   it "returns a profile’s submissions" do

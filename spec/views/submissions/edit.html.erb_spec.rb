@@ -1,8 +1,10 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.describe "submissions/edit", type: :view do
   before(:each) do
-    @submission = assign(:submission, Submission.create!())
+    @submission = assign(:submission, Submission.create!)
   end
 
   it "renders the edit submission form" do

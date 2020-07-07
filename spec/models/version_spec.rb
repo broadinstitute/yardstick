@@ -1,4 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 describe Version, "#challenge" do
   it "returns a version’s challenge" do

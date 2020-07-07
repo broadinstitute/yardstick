@@ -1,4 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 describe Challenge, "#task" do
   it "returns a challenge’s task" do

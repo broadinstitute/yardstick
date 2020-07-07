@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -8,7 +10,8 @@ class TasksController < ApplicationController
   end
 
   private
-    def task_parameters
-      params.fetch(:task, {})
-    end
+
+  def task_parameters
+    params.fetch(:task, {})
+  end
 end

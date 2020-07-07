@@ -1,4 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
 
-describe 'GET #index' do
+require "rails_helper"
+
+describe "GET #index" do
 end
