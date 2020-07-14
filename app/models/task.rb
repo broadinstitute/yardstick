@@ -7,7 +7,7 @@ class Task < ApplicationRecord
 
   validates_associated :challenges
 
-  def to_param
-    "#{slug}"
+  def endpoint
+    File.join("/", ["tasks", slug])
   end
 end

@@ -7,6 +7,7 @@ class CreateVersions < ActiveRecord::Migration[6.0]
       table.references :validation_partition, foreign_key: { to_table: "partitions" }, type: :uuid
 
       table.string     :name,        default: "", null: false
+      table.string     :slug,        default: "", null: false
       table.text       :description, default: "", null: false
 
       table.timestamps

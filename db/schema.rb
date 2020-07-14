@@ -123,6 +123,7 @@ ActiveRecord::Schema.define(version: 2020_07_09_171042) do
     t.uuid "training_partition_id"
     t.uuid "validation_partition_id"
     t.string "name", default: "", null: false
+    t.string "slug", default: "", null: false
     t.text "description", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

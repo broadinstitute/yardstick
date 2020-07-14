@@ -1,30 +1,19 @@
 import * as React from "react";
-import {useEffect, useState} from "react";
-import axios from "axios";
+import { ThemeProvider } from "@material-ui/core";
+import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { Root } from "./Root";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
-type ApplicationProps = {}
-
-const Application = ({}: ApplicationProps) => {
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [tasks, setTasks] = useState<Array<Task>>([]);
-
-    useEffect(() => {
-        axios.get("/tasks.json")
-            .then(function (response) {
-                setLoading(true);
-
-                setTasks(response.data);
-            })
-            .catch(function (error) {
-                setLoading(true);
-
-                setError(error);
-            });
-    }, [])
+const Application = (): JSX.Element => {
+    const theme = createMuiTheme({});
 
     return (
-        <div/>
+        <Provider store={store}>
+            <ThemeProvider theme={theme}>
+                <Root />
+            </ThemeProvider>
+        </Provider>
     );
 };
 
